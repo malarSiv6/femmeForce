@@ -14,20 +14,26 @@ struct ContentView: View {
         VStack (spacing: 100){
             Text(titleText)
                 .font(.title)
+                .multilineTextAlignment(.center)
+                .padding(.vertical)
             TextField("Type Name Here...", text: $name)
+                .padding(.vertical)
+                .frame(width: 300.0, height: 50.0)
                 .multilineTextAlignment(.center)
                 .font(.title)
-                .border(Color.gray, width: 1)
-            Button(/*@START_MENU_TOKEN@*/"    Continue      "/*@END_MENU_TOKEN@*/) {
+                .border(Color(red: 0.877, green: 0.369, blue: 0.368), width: 3)
+                .cornerRadius(/*@START_MENU_TOKEN@*/11.0/*@END_MENU_TOKEN@*/)
+            Button(/*@START_MENU_TOKEN@*/"Continue"/*@END_MENU_TOKEN@*/) {
                 titleText = "Welcome, \(name)!"
             }
             .font(/*@START_MENU_TOKEN@*/.body/*@END_MENU_TOKEN@*/)
             .tint(Color(red: 0.285, green: 0.184, blue: 0.064))
-            .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
-            .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
             .foregroundColor(.white)
             .padding()
-            .background(Color.blue)
+            .background(Color(red: 0.916, green: 0.522, blue: 0.501))
+            .cornerRadius(/*@START_MENU_TOKEN@*/11.0/*@END_MENU_TOKEN@*/)
+            .border(/*@START_MENU_TOKEN@*/Color(red: 0.873, green: 0.369, blue: 0.368)/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/3/*@END_MENU_TOKEN@*/)
+            .cornerRadius(11.0)
         }
         .padding()
         .frame(width: 500.0, height: 800.0)
