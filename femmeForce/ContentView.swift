@@ -18,13 +18,16 @@ struct ContentView: View {
                 .multilineTextAlignment(.center)
                 .font(.title)
                 .border(Color.gray, width: 1)
-            Button(/*@START_MENU_TOKEN@*/"    Submit Name    "/*@END_MENU_TOKEN@*/) {
+            Button(/*@START_MENU_TOKEN@*/"    Continue      "/*@END_MENU_TOKEN@*/) {
                 titleText = "Welcome, \(name)!"
             }
             .font(/*@START_MENU_TOKEN@*/.body/*@END_MENU_TOKEN@*/)
             .tint(Color(red: 0.285, green: 0.184, blue: 0.064))
-            .buttonBorderShape(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=shape: ButtonBorderShape@*/.capsule/*@END_MENU_TOKEN@*/)
             .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+            .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+            .foregroundColor(.white)
+            .padding()
+            .background(Color.blue)
         }
         .padding()
         .frame(width: 500.0, height: 800.0)
