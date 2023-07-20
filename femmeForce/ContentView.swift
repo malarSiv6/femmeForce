@@ -26,7 +26,7 @@ struct ContentView: View {
                 .cornerRadius(/*@START_MENU_TOKEN@*/11.0/*@END_MENU_TOKEN@*/)
                 .fontWeight(/*@START_MENU_TOKEN@*/.light/*@END_MENU_TOKEN@*/)
             NavigationLink(destination: homePage()) {
-                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Label Content@*/Text("yup")/*@END_MENU_TOKEN@*/
+                Text("Continue")
             }
 
 //            Button(/*@START_MENU_TOKEN@*/"Continue"/*@END_MENU_TOKEN@*/) {
