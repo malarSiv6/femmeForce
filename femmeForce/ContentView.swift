@@ -6,23 +6,21 @@
 //
 
 import SwiftUI
-import AVKit
 
 struct ContentView: View {
     @State private var name = ""
     @State private var titleText = "What is your name?"
-    @State private var player = AVPlayer()
     var body: some View {
         NavigationStack {
-            ZStack {
-                
                 
                 VStack (spacing: 100){
+                    
                     Text(titleText)
                         .font(.title)
                         .fontWeight(.light)
                         .multilineTextAlignment(.center)
                         .padding(.vertical)
+                    
                     TextField("Type Name Here...", text: $name)
                         .padding([.top, .leading, .bottom])
                         .frame(width: 300.0, height: 50.0)
@@ -46,13 +44,12 @@ struct ContentView: View {
                             .cornerRadius(11.0)
                                 }
                 }
-
+        .padding()
+        .frame(width: 500.0, height: 800.0)
+        .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(red: 0.988, green: 0.829, blue: 0.75)/*@END_MENU_TOKEN@*/)
             }
-            .padding()
-            .frame(width: 500.0, height: 800.0)
-            .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(red: 0.991, green: 0.829, blue: 0.75)/*@END_MENU_TOKEN@*/)
         }
-    }
+    
     
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {
@@ -60,4 +57,4 @@ struct ContentView: View {
         }
     }
     
-}
+
