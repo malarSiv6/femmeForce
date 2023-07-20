@@ -11,7 +11,6 @@ struct ContentView: View {
     @State private var name = ""
     @State private var titleText = "What is your name?"
     var body: some View {
-        Text("HI")
         NavigationStack {
             VStack (spacing: 100){
                 Text(titleText)
@@ -27,22 +26,19 @@ struct ContentView: View {
                     .border(Color(red: 0.877, green: 0.369, blue: 0.368), width: 3)
                     .cornerRadius(/*@START_MENU_TOKEN@*/11.0/*@END_MENU_TOKEN@*/)
                     .fontWeight(/*@START_MENU_TOKEN@*/.light/*@END_MENU_TOKEN@*/)
-                NavigationLink(destination: homePage()) {
-                    Text("Continue")
-                }
                 
-                //            Button(/*@START_MENU_TOKEN@*/"Continue"/*@END_MENU_TOKEN@*/) {
-                //                titleText = "Welcome, \(name)!"
-                //            }
-                //            .font(/*@START_MENU_TOKEN@*/.body/*@END_MENU_TOKEN@*/)
-                //            .fontWeight(.light)
-                //            .tint(Color(red: 0.285, green: 0.184, blue: 0.064))
-                //            .foregroundColor(.white)
-                //            .padding()
-                //            .background(Color(red: 0.916, green: 0.522, blue: 0.501))
-                //            .cornerRadius(/*@START_MENU_TOKEN@*/11.0/*@END_MENU_TOKEN@*/)
-                //            .border(/*@START_MENU_TOKEN@*/Color(red: 0.873, green: 0.369, blue: 0.368)/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/3/*@END_MENU_TOKEN@*/)
-                //            .cornerRadius(11.0)
+                Button(/*@START_MENU_TOKEN@*/"Continue"/*@END_MENU_TOKEN@*/) {
+                                titleText = "Welcome, \(name)!"
+                            }
+                            .font(/*@START_MENU_TOKEN@*/.body/*@END_MENU_TOKEN@*/)
+                            .fontWeight(.light)
+                            .tint(Color(red: 0.285, green: 0.184, blue: 0.064))
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(Color(red: 0.916, green: 0.522, blue: 0.501))
+                            .cornerRadius(/*@START_MENU_TOKEN@*/11.0/*@END_MENU_TOKEN@*/)
+                            .border(/*@START_MENU_TOKEN@*/Color(red: 0.873, green: 0.369, blue: 0.368)/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/3/*@END_MENU_TOKEN@*/)
+                            .cornerRadius(11.0)
             }
             .padding()
             .frame(width: 500.0, height: 800.0)
